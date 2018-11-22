@@ -29,9 +29,11 @@ function addTask(e) {
     link.innerHTML = '<i class="fa fa-remove"></i>';
 
     // APPEND LINK TO LI
-    li.appendChild(link);
+    appendElements(li, link);
 
     // APPEND LI TO UL
-    taskList.appendChild(li);
+    appendElements(taskList, li);
   }
 }
+
+appendElements = (a, b) => a.appendChild(b);
