@@ -33,6 +33,9 @@ function addTask(e) {
 
     // APPEND LI TO UL
     appendElements(taskList, li);
+
+    // CLEAR INPUT
+    taskInput.value = "";
   }
 }
 
