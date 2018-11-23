@@ -1,17 +1,53 @@
-.collection-item {
-  animation: slidein 500ms;
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.slide-in {
+  animation: slidein 1000ms;
+}
+
+.remove-item {
+  animation: remove 1000ms;
+}
+
+.row .col {
+  float: none;
 }
 
 @keyframes slidein {
   0% {
-    margin-left: -100px;
+    opacity: 0;
+    transform: translateY(600px) rotateZ(90deg);
   }
 
   50% {
-    font-size: 3em;
+    font-size: 2em;
   }
 
-  to {
+  100% {
     margin-left: 0;
+    opacity: 1;
+    transform: translateY(0) rotateZ(0);
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+    margin-left: 50px;
+  }
+
+  50% {
+    opacity: 0.5;
+    margin-left: -100px;
+  }
+
+  100% {
+    opacity: 0;
+    margin-left: -300px;
   }
 }
