@@ -1,0 +1,17 @@
+.collection-item {
+  animation: slidein 500ms;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -100px;
+  }
+
+  50% {
+    font-size: 3em;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
